@@ -17,9 +17,13 @@ import axios from 'axios'
 export default {
     methods: {
         removeTodo() {
-            axios.post('/').then(() => {}).catch(() => {})
+            axios.post('http://127.0.0.1:8000/api/todos/{todo}').then(() => {}).catch(() => {})
         }
     },
+        listTodo() {
+            axios.post('http://127.0.0.1:8000/api/index').then(() => {}).catch(() => {})
+        }
+
 }
 </script>
 

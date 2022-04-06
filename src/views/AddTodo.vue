@@ -9,7 +9,21 @@
             type="text"
             class="w-full h-12 border border-gray-800 rounded px-3 outline-none"
             placeholder="Enter todo"
-            v-model="allData.name"
+            v-model="allData.title"
+            required
+          />
+           <input
+            type="text"
+            class="w-full h-12 border border-gray-800 rounded px-3 outline-none"
+            placeholder="Enter todo"
+            v-model="allData.description"
+            required
+          />
+           <input
+            type="text"
+            class="w-full h-12 border border-gray-800 rounded px-3 outline-none"
+            placeholder="Enter todo"
+            v-model="allData.completed"
             required
           />
           <button
@@ -29,14 +43,16 @@ export default {
     data() {
         return {
             allData: {
-                name: ''
+                title: '',
+                description: '',
+                completed: ''
             }
         }
     },
     methods: {
         submitData() {
-            axios.post('/regiser', this.allData).then(() => {
-                alert('Loggin successfully')
+            axios.post('/store', this.allData).then(() => {
+                alert('Store successfully')
             }).catch(err => {
                 alert(err.response.data)
             })

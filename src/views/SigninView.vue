@@ -44,8 +44,9 @@ export default {
     },
     methods: {
         submitData() {
-            axios.post('http://127.0.0.1:8088/api/login', this.allData).then(() => {
-                alert('Loggin successfully')
+            axios.post('http://127.0.0.1:8088/api/login', this.allData).then((res) => {
+                this.$store.dispatch('SET_USER', res.data)
+                this.$router.push('/list')
             }).catch(err => {
                 alert(err.response.data)
             })

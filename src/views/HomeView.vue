@@ -27,6 +27,15 @@
 // @ is an alias to /src
 
 export default {
-  name: 'HomeView'
-}
+  name: 'HomeView',
+    // methods: {
+    //     submitData() {
+    //         axios.post('http://127.0.0.1:8088/api/index', this.allData).then(() => {
+    //             alert('Loggin successfully')
+    //         }).catch(err => {
+    //             alert(err.response.data)
+    //         })
+    //     }
+    // },
+};
 </script>
