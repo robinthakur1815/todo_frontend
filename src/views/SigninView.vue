@@ -44,7 +44,7 @@ export default {
     },
     methods: {
         submitData() {
-            axios.post('/regiser', this.allData).then(() => {
+            axios.post('http://127.0.0.1:8088/api/login', this.allData).then(() => {
                 alert('Loggin successfully')
             }).catch(err => {
                 alert(err.response.data)

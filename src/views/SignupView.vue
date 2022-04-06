@@ -56,13 +56,13 @@ export default {
                 name: '',
                 email: '',
                 password: '',
-                confirm_password: ''
+                c_password: ''
             }
         }
     },
     methods: {
         submitData() {
-            axios.post('/regiser', this.allData).then(() => {
+            axios.post('http://127.0.0.1:8088/api/register', this.allData).then(() => {
                 alert('user registered successfully')
             }).catch(err => {
                 alert(err.response.data)
